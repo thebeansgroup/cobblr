@@ -1,0 +1,105 @@
+@import "compass";
+@include global-reset;
+$base-line-height: 20px;
+$base-font-size: 13px;
+$gutter: 10px;
+@include establish-baseline();
+
+* {
+  @include box-sizing(border-box);
+}
+
+body {
+  font-family: 'Courier', sans-serif;
+  background-color: #efefef;
+  color: #0d0d0d;
+}
+
+header {
+  font-family: 'PT Serif', serif;
+}
+
+.group {
+  width: 500px;
+  margin: 0 auto;
+  padding: $base-line-height;
+}
+ 
+
+// Type
+// =========
+//
+h1 {
+  padding-top: $base-line-height*3;
+  font-size: 178px;
+  line-height: 1.6;
+  font-style:italic;
+  text-align:center;
+
+  span {
+    border-bottom: 3px solid #0d0d0d;
+  }
+}
+
+
+// Form
+// ==========
+//
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #000;
+}
+
+input,textarea {
+  display: inline-block;
+  width: 100%;
+  max-width:100%;
+  height: $base-line-height + $gutter;
+  padding: $gutter/2;
+  vertical-align: middle;
+  font-family: 'Courier', sans-serif;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  color: #444;
+  border: 1px solid #000;
+  @include border-radius(1px);
+  &:focus {
+    border-color: #555;
+    $shadow: 0 0 8px transparentize(#FFF84C,0.6);
+    @include box-shadow($shadow);
+    outline: 0;
+    outline: thin dotted \9; /* IE6-9 */
+  }
+}
+
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  width: auto;
+  height: auto;
+  background-color:#000;
+  color:#fff;
+}
+
+form li li {
+  margin-bottom: $base-line-height/2;
+}
+
+.l, .r {
+  width: 50%;
+  padding: 0 $gutter;
+}
+
+.l {
+  float:left;
+  clear:left;
+  width: 50%;
+}
+.r {
+  float:right;
+  clear:right;
+}
+.c {
+  clear:both;
+}

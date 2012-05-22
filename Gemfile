@@ -1,6 +1,7 @@
 source :rubygems
 
 gem 'sinatra'
+gem 'sinatra-reloader'
 gem 'activesupport'
 gem 'i18n' # stupid activesupport dependency
 
@@ -15,6 +16,5 @@ gem 'haml'
 gem 'sass'
 gem 'compass'
 gem 'coffee-script'
-# gem 'therubyracer', :group => :development
-gem 'therubyracer-heroku', '~> 0.8.1.pre3', :group => :production
+gem 'therubyracer'
 gem 'uglifier'

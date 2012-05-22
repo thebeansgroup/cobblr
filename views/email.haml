@@ -1,0 +1,31 @@
+%font{ :face=>"Arial, Helvetica, Geneva, Sans-Serif", :color=>"#000000", :style=>"font-size: 11px;line-height: 15px;"}
+  %br
+  %a{:href=>@companyURL}
+    %img{:src=>@companyLogo, :width=>74, :height=>36, :style=>"display:block",  :border=>"0"}
+  %br
+  %font{:color=>@companyColor , :style=>"font-size: 13px;"}
+    %strong{:style=>" padding-bottom: 3px; display: block"}= params[:name]
+  = params[:job_title]
+  %br ::
+  %strong= @companyName
+  %br
+  %strong Phone:
+  = @companyPhone
+  %br
+  %strong Web:
+  %a{:href=>@companyWeb, :style=>"color:#0000ff;"}= @companyWeb
+  %br
+  %strong Twitter:
+  %a{:href=>@companyTwitterURL, :style=>"color:#0000ff;"}= @companyTwitter
+  %br
+  %strong Join us on 
+  %a{:href=>@companyLinkedin, :style=>"color:#0000ff;"}  LinkedIn
+  %br ::
+  %strong= params[:cta_body]
+  %a{:href=>params[:cta_link], :style=>"color:#0000ff;"}= params[:cta_link_text]
+  %br ::
+  %font{:style=>"font-size: 10px;"}
+    Office address: Unit 2, Bradley House, St Albans Lane, Golders Green, London NW11 7QE
+    %br
+    Registered Office: 6 Breams Buildings, London EC4A 1QL. Registered as a company in England and Wales, number: 5486885. VAT Registration Number: 873 0262 33
+  %br
