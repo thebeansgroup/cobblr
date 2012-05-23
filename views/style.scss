@@ -95,11 +95,17 @@ form li li {
   float:left;
   clear:left;
   width: 50%;
+  margin-bottom: $base-line-height*2;
 }
 .r {
   float:right;
   clear:right;
+  margin-bottom: $base-line-height*2;
+  border-left: 1px dotted #000;
 }
 .c {
   clear:both;
+  padding-top: $base-line-height/2;
+  border-top: 1px dotted #000;
+  text-align:right;
 }
