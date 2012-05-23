@@ -4,6 +4,8 @@ gem 'sinatra'
 gem 'sinatra-reloader'
 gem 'activesupport'
 gem 'i18n' # stupid activesupport dependency
+gem 'rvm-capistrano'
+gem 'railsless-deploy', :require => nil
 
 group :development do
   gem 'shotgun'
@@ -18,3 +20,4 @@ gem 'compass'
 gem 'coffee-script'
 gem 'therubyracer'
 gem 'uglifier'
+gem 'thin'
