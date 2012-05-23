@@ -6,13 +6,16 @@ require "bundler/capistrano"
 set :rvm_ruby_string, ENV['GEM_HOME'].gsub(/.*\//,"") # Read from local system
 require "rvm/capistrano"                               # Load RVM's capistrano plugin.
 
+set :user, "deploy"
 set :use_sudo, false
+ssh_options[:forward_agent] = true
 
-set :application, "thebeansgroup"
-set :repository,  "git@github.com:thebeansgroup/coblr.git"
+set :application, "cobblr"
+set :repository,  "git@github.com:thebeansgroup/cobblr.git"
 set :scm, :git
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
 set :deploy_to, "/var/www/apps/#{application}"
+set :deploy_via, :remote_cache
 
 role :web, "testbox.beans"                          # Your HTTP server, Apache/etc
 
