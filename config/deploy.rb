@@ -34,3 +34,18 @@ after "deploy:restart", "deploy:cleanup"
 #     run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
 #   end
 # end
+
+namespace :deploy do
+  task :start, :roles => [:web] do
+      run "cd #{deploy_to}/current && nohup thin start"
+    end
+ 
+    task :stop, :roles => [:web] do
+      run "cd #{deploy_to}/current && nohup thin stop"
+    end
+ 
+    task :restart, :roles => [:web] do
+      deploy.stop
+      deploy.start
+    end
+  end
