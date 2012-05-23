@@ -10,6 +10,7 @@ set :user, "deploy"
 set :use_sudo, false
 ssh_options[:forward_agent] = true
 
+set :branch, "deploy"
 set :application, "cobblr"
 set :repository,  "git@github.com:thebeansgroup/cobblr.git"
 set :scm, :git
