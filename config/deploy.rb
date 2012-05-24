@@ -37,11 +37,11 @@ after "deploy:restart", "deploy:cleanup"
 
 namespace :deploy do
   task :start, :roles => [:web] do
-      run "cd #{deploy_to}/current && nohup thin start &"
+      run "cd #{deploy_to}/current && nohup thin start --daemonize"
     end
  
     task :stop, :roles => [:web] do
-      run "cd #{deploy_to}/current && nohup thin stop &"
+      run "cd #{deploy_to}/current && nohup thin stop"
     end
  
     task :restart, :roles => [:web] do
