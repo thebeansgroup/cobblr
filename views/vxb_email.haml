@@ -1,0 +1,28 @@
+%font{ :face=>"Arial, Helvetica, Geneva, Sans-Serif", :color=>"#000000", :style=>"font-size: 11px;line-height: 15px;"}
+  %br
+  %a{:href=>@companyURL}
+    %img{:src=>@companyLogo, :width=>20, :height=>26, :style=>"display:block", :border=>"0"}
+  %font{:style=>"font-size: 13px;"}
+    %strong{:style=>" padding-bottom: 3px; padding-top: 10px; display: block"}= params[:name]
+  = params[:job_title]
+  %font{:color=>@companyColor}
+    |
+  = @companyName
+  %br ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+  Phone:
+  = @companyPhone
+  %br
+  Web:
+  %a{:href=>@companyWeb, :style=>"color:#0000ff;"}= @companyWeb
+  %br
+  Twitter:
+  %a{:href=>@companyTwitterURL, :style=>"color:#0000ff;"}= @companyTwitter
+  %br
+  Join us on
+  %a{:href=>@companyLinkedin, :style=>"color:#0000ff;"}  LinkedIn
+  %br ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+  %font{:style=>"font-size: 10px;"}
+    Office address: Unit 2, Bradley House, St Albans Lane, Golders Green, London NW11 7QE
+    %br
+    Registered Office: 6 Breams Buildings, London EC4A 1QL. Registered as a company in England and Wales, number: 5486885. VAT Registration Number: 873 0262 33
+  %br

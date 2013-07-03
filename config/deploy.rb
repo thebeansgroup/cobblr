@@ -2,8 +2,8 @@
 require "bundler/capistrano"
 
 # Set-up rvm for use with capistrano
-# set :rvm_ruby_string, 'ree@rails3'                     # Or:
-set :rvm_ruby_string, ENV['GEM_HOME'].gsub(/.*\//,"") # Read from local system
+set :rvm_ruby_string, '1.9.3-p125'                     # Or:
+#set :rvm_ruby_string, ENV['GEM_HOME'].gsub(/.*\//,"") # Read from local system
 require "rvm/capistrano"                               # Load RVM's capistrano plugin.
 
 set :user, "deploy"
@@ -37,13 +37,13 @@ after "deploy:restart", "deploy:cleanup"
 
 namespace :deploy do
   task :start, :roles => [:web] do
-      run "cd #{deploy_to}/current && nohup thin start --daemonize --environment=production"
+      run "cd #{deploy_to}/current && nohup bundle exec thin start --port 3000 --daemonize --environment=production"
     end
- 
+
     task :stop, :roles => [:web] do
-      run "cd #{deploy_to}/current && nohup thin stop"
+      run "cd #{deploy_to}/current && nohup bundle exec thin stop"
     end
- 
+
     task :restart, :roles => [:web] do
       deploy.stop
       deploy.start
