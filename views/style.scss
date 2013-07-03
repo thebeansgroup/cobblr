@@ -109,3 +109,25 @@ form li li {
   border-top: 1px dotted #000;
   text-align:right;
 }
+
+.welcome li {
+  display: inline-block;
+  width: 100%;
+  max-width:100%;
+  height: $base-line-height + $gutter;
+  padding: $gutter/2;
+  vertical-align: middle;
+  font-family: 'Courier', sans-serif;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  color: #444;
+  border: 1px solid #000;
+  @include border-radius(1px);
+  &:focus {
+    border-color: #555;
+    $shadow: 0 0 8px transparentize(#FFF84C,0.6);
+    @include box-shadow($shadow);
+    outline: 0;
+    outline: thin dotted \9; /* IE6-9 */
+  }
+}
