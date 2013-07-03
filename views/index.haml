@@ -8,29 +8,13 @@
     %header
       %h1
         %span Cobblr
-
-
-
-    %form{:method=>"post", :action=>"/display-email", :class=>"group"}
-      %ul
-        %li.l
-          %ul
-            %li
-              %label{:for=>"full_name"} Full Name
-              %input{:type=>"text",:id=>"full_name", :name=>"name", :placeholder=>"Full name", :required=>true}
-            %li
-              %label{:for=>"job"} Job Title
-              %input{:type=>"text", :id=>"job", :name=>"job_title", :placeholder=>"Job Title", :required=>true}
-        %li.r
-          %ul
-            %li
-              %label{:for=>"cta_body"} CTA Body Text
-              %input{:type=>"text", :id=>"cta_body", :name=>"cta_body", :placeholder=>"Call to action body text", :required=>true}
-            %li
-              %label{:for=>"cta_link_text"} CTA Link Text
-              %input{:type=>"text", :id=>"cta_link_text", :name=>"cta_link_text", :placeholder=>"Call to action link text", :required=>true}
-            %li
-              %label{:for=>"cta_link"} CTA Link URL
-              %input{:type=>"text",:id=>"cta_link", :name=>"cta_link", :placeholder=>"Call to action link", :required=>true}
-        %li.c
-          %input{:type=>"submit"}
+    %h2{:style=>"text-align: center;"} Select your weapon of choice
+    %ul.group
+      %li.l
+        Generate footer for:
+        %br
+        %a{:href=>"/tbg"} The Beans Group
+      %li.r
+        Generate footer for:
+        %br
+        %a{:href=>"/vxb"} Voxburner
