@@ -1,0 +1,25 @@
+!!!
+%html
+  %head
+    %title Cobblr - Email Footer Cobbling
+    %link{ :href=>'http://fonts.googleapis.com/css?family=PT+Sans:400,700|PT+Serif:700,400italic,700italic', :rel=>'stylesheet', :type=>'text/css'}
+    %link{ rel: "stylesheet", type: "text/css", href: "/style.css" }
+  %body
+    %header
+      %h1
+        %span Cobblr
+
+
+
+    %form{:method=>"post", :action=>"/display-vxb_email", :class=>"group"}
+      %ul
+        %li.l
+          %ul
+            %li
+              %label{:for=>"full_name"} Full Name
+              %input{:type=>"text",:id=>"full_name", :name=>"name", :placeholder=>"Full name", :required=>true}
+            %li
+              %label{:for=>"job"} Job Title
+              %input{:type=>"text", :id=>"job", :name=>"job_title", :placeholder=>"Job Title", :required=>true}
+        %li.c
+          %input{:type=>"submit"}
