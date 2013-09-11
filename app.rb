@@ -35,7 +35,7 @@ end
 
 def tbg
   @companyLogo = "http://tbg-assets.s3.amazonaws.com/thebeansgroup/email_footer/ef-TBG-logo.jpg"
-  @companyURL = "http://thebeansgroup.com"
+  @companyURL = "http://www.thebeansgroup.com"
   @companyColor = "#00993b"
   @companyName = "The Beans Group"
   @companyPhone = "0870 3831 599"
