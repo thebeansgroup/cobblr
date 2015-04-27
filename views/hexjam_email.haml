@@ -1,0 +1,26 @@
+%font{ :face=>"Arial, Helvetica, Geneva, Sans-Serif", :color=>"#000000", :style=>"font-size: 11px;line-height: 15px;"}
+  %br
+  %img{:src=>@companyLogo, :width=>74, :height=>26, :style=>"display:block", :border=>"0"}
+  %br
+  %font{:style=>"font-size: 12px;"}
+    %span{:style=>" padding-bottom: 2px; padding-top: 5px; display: block"}= params[:name]
+    = params[:job_title]
+  %br ::
+  %strong= @companyName
+  %br
+  = @companyStrap
+  %br
+  %a{:href=>@companyURL, :style=>"color:#0000ff;"}= @companyWeb
+  %br
+  %strong Twitter:
+  %a{:href=>@companyTwitterURL, :style=>"color:#0000ff;"}= @companyTwitter
+  %br
+  %strong Phone:
+  = @companyPhone
+  %br ::
+  %font{:style=>"font-size: 10px;"}
+    = @office
+    %br
+    = @registered
+    = @vat
+  %br

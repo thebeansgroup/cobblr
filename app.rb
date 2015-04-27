@@ -45,6 +45,16 @@ post '/display-sbn_email' do
   haml :sbn_email
 end
 
+get "/hexjam" do
+  haml :hexjam_form
+end
+
+post '/display-hexjam_email' do
+  hexjam
+  offices
+  haml :hexjam_email
+end
+
 
 def tbg
   @companyLogo = "http://tbg-assets.s3.amazonaws.com/thebeansgroup/email_footer/ef-TBG-logo.jpg"
@@ -81,6 +91,20 @@ def sbn
   @companyTwitterURL = "http://twitter.com/voxburner"
   @companyLinkedin = "http://www.linkedin.com/company/voxburner"
 end
+
+def hexjam
+  @companyLogo = "http://tbg-assets.s3.amazonaws.com/hexjam/email_footer/hexjam_logo.png"
+  @companyURL = "http://hexjam.com"
+  @companyColor = "#1D1D1B"
+  @companyName = "Hexjam"
+  @companyStrap = "Everything else can wait"
+  @companyPhone = "0203 095 1400"
+  @companyWeb = "www.hexjam.com"
+  @companyTwitter = "@hexjam"
+  @companyTwitterURL = "http://twitter.com/hexjam"
+  @companyFacebook = "http://www.facebook.com/hexjam"
+end
+
 
 def offices
   @office     = "Office address: Unit 420 Highgate Studios, 53-79 Highgate Road, London, NW5 1TL"
